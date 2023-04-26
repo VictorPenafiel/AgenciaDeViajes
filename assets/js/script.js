@@ -16,3 +16,19 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+$('#tarjeta').click(function () {
+  $('#exampleModal').modal('show');
+});
+
+$('#tarjeta2').click(function () {
+  $('#exampleModal2').modal('show');
+});
+
+$('#tarjeta3').click(function () {
+  $('#exampleModal3').modal('show');
+});
+
+$('#tarjeta4').click(function () {
+  $('#exampleModal4').modal('show');
+});

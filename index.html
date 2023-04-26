@@ -9,8 +9,9 @@
     <meta name="copyright" content="Propietario del copyright" />
     <!--ICONO DEL NAVEGADOR-->
     <link rel="icon" type="image/svg" href="assets/img/viajes.svg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Viajes Chile</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"></script>
 
   </head>
   <body id="Inicio">
@@ -124,14 +127,14 @@
 
 
 
-    <section class="container" id="tarjeta">
+    <section class="container">
       <div class="border-top border-dark"></div>
       <h2 class="py-4 text-center text-light">DESTACADOS</h2>
       <main class="container">
         <section class="row">
           <article class="col-sm-12 col-lg-3">
-            <div class="card mx-2">
-              <img src="assets\img\card1.jpg" class="card-img-top" height="52%"alt="montañas y lago en el sur">
+            <div class="card mx-2" id="tarjeta">
+              <img src="assets\img\card1.jpg" class="card-img-top object-fit-cover" height="52%" alt="montañas y lago en el sur">
               <div class="card-body">
                 <h5 class="card-title fw-light mb-3">Lorem ipsum dolor sit amet</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -140,8 +143,8 @@
             </div>
           </article>
           <article class="col-sm-12 col-lg-3">
-            <div class="card mx-2">
-              <img src="assets\img\card2.jpg" class="card-img-top" height="22%" alt="montaña y lago en el norte">
+            <div class="card mx-2" id="tarjeta2">
+              <img src="assets\img\card2.jpg" class="card-img-top object-fit-cover" height="22%" alt="montaña y lago en el norte">
               <div class="card-body">
                 <h5 class="card-title fw-light mb-3">Lorem ipsum dolor sit amet</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
@@ -150,8 +153,8 @@
             </div>
           </article>
           <article class="col-sm-12 col-lg-3">
-            <div class="card mx-2">
-              <img src="assets\img\card3.jpg" class="card-img-top" alt="Salar">
+            <div class="card mx-2" id="tarjeta3">
+              <img src="assets\img\card3.jpg" class="card-img-top  object-fit-cover" alt="Salar">
               <div class="card-body">
                 <h5 class="card-title fw-light mb-3">Lorem ipsum dolor sit amet</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -160,8 +163,8 @@
             </div>
           </article>
           <article class="col-sm-12 col-lg-3">
-            <div class="card mx-2">
-              <img src="assets\img\card4.jpg" class="card-img-top" alt="Bosque">
+            <div class="card mx-2" id="tarjeta4">
+              <img src="assets\img\card4.jpg" class="card-img-top object-fit-cover" alt="Bosque">
               <div class="card-body">
                 <h5 class="card-title fw-light mb-3">Lorem ipsum dolor sit amet</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -172,6 +175,94 @@
         </section>
       </main>
     </section>
+    <!-- Modal -->
+    
+    <section>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content ">
+            <div class="modal-header justify-content-center">
+              <h2 class="modal-title fs-10 text-light text-center " id="exampleModalLabel">GASEOSAS</h2>
+            </div>
+            <div class="modal-body">
+              <p class="card-text text-light fs-8 text-center">This is a longer card with supporting text below as a
+                natural lead-in to additional
+                content.</p>
+              <div class="card">
+                <img src="assets\img\card1.jpg" alt="bebidas" class="card-img-top object-fit-cover">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content ">
+            <div class="modal-header justify-content-center">
+              <h2 class="modal-title fs-10 text-light text-center " id="exampleModalLabel2">TABLAS</h2>
+            </div>
+            <div class="modal-body">
+              <p class="card-text text-light fs-8 text-center">This is a longer card with supporting text below as a
+                natural lead-in to additional
+                content.</p>
+              <div class="card">
+                <img src="assets\img\card2.jpg" alt="tablas" class="card-img-top object-fit-cover">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content ">
+            <div class="modal-header justify-content-center">
+              <h2 class="modal-title fs-10 text-light text-center " id="exampleModalLabel3">SHOP CERVEZA</h2>
+            </div>
+            <div class="modal-body">
+              <p class="card-text text-light fs-8 text-center">This is a longer card with supporting text below as a
+                natural lead-in to additional
+                content.</p>
+              <div class="card">
+                <img src="assets\img\card3.jpg" alt="bebidas" class="card-img-top object-fit-cover">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content ">
+            <div class="modal-header justify-content-center">
+              <h2 class="modal-title fs-10 text-light text-center " id="exampleModalLabel4">TABLAS</h2>
+            </div>
+            <div class="modal-body">
+              <p class="card-text text-light fs-8 text-center">This is a longer card with supporting text below as a
+                natural lead-in to additional
+                content.</p>
+              <div class="card">
+                <img src="assets\img\card4.jpg" alt="tablas" class="card-img-top object-fit-cover">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container linehr mb-5">
+      <hr>
+    </div>
+
      <!--FORMULARIO DE COMUNICACIÓN-->
      <section class="container mt-5 mb-5 d-none d-md-block">
       <div class="row">
@@ -297,9 +388,10 @@
       </div>
     </footer>
 
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+      </script>
+    crossorigin="anonymous"></script>
     <script src="assets\js\script.js"></script>
   </body>
 
